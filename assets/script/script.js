@@ -35,3 +35,12 @@ $(".rowBtn").on("click", function() {
     var dayPlan = $($(this).parent().children()[1]).val();
     localStorage.setItem(currentTime, dayPlan);
 });
+$(".time").each(function() {
+    console.log($(this));
+    var currentTime = $(this).parent().attr("id");
+    console.log($(this).parent().attr("id"));
+
+    var dayPlan = localStorage.getItem(currentTime);
+    $(this).val(dayPlan);
+    console.log($(this).val(dayPlan));
+});
