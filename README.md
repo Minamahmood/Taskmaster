@@ -1,4 +1,4 @@
-# https://github.com/Minamahmood/Day-schedule
+# https://github.com/Minamahmood/Taskmaster
 
 ![example](https://user-images.githubusercontent.com/56496370/110220050-f9145780-7e77-11eb-8665-9041fd580904.gif)
 
@@ -40,7 +40,7 @@ Email: minamahmood83@gmail.com
 
 ## Deployed
 
-https://minamahmood.github.io/Day-schedule/
+https://minamahmood.github.io/Taskmaster/
 
 ## License
 
