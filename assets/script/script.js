@@ -13,6 +13,7 @@ function styleTime() {
             //past
             console.log(i);
             $("#" + i).attr("style", "background-color:lightpink");
+            $("#" + i).attr("readonly", true);
         } else if (i === curTime) {
             //present
             console.log(i);
@@ -24,3 +25,13 @@ function styleTime() {
         }
     }
 }
+
+$(".rowBtn").on("click", function() {
+    //Each btn when clicked
+    //get the value of its parent input
+    //then saves it to localstorige
+    var currentTime = $(this).parent().attr("id");
+    console.log($($(this).parent().children()[1]).val());
+    var dayPlan = $($(this).parent().children()[1]).val();
+    localStorage.setItem(currentTime, dayPlan);
+});
