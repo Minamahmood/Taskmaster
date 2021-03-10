@@ -6,13 +6,21 @@ function styleTime() {
     var curTime = moment().format("h A");
     $("#theDate").append(`<br>${curTime}`);
     curTime = moment().format("H");
-    for (i = 0; i <= 18; i++) {
+    curTime -= 9;
+    console.log(curTime);
+    for (let i = 0; i <= 18; i++) {
         if (i < curTime) {
             //past
+            console.log(i);
+            $("#" + i).attr("style", "background-color:lightpink");
         } else if (i === curTime) {
             //present
+            console.log(i);
+            $("#" + i).attr("style", "background-color:green");
         } else {
             //future
+            console.log(i);
+            $("#" + i).attr("style", "background-color:white");
         }
     }
 }
