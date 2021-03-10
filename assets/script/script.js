@@ -2,6 +2,7 @@ var curDate = moment().format("MM/DD/YYYY");
 $("#theDate").append(curDate);
 styleTime();
 
+//loops over all time slots and styles them
 function styleTime() {
     var curTime = moment().format("h A");
     $("#theDate").append(`<br>${curTime}`);
@@ -25,7 +26,7 @@ function styleTime() {
         }
     }
 }
-
+//Each save bottom when clicked saves the text value
 $(".rowBtn").on("click", function() {
     //Each btn when clicked
     //get the value of its parent input
@@ -35,6 +36,7 @@ $(".rowBtn").on("click", function() {
     var dayPlan = $($(this).parent().children()[1]).val();
     localStorage.setItem(currentTime, dayPlan);
 });
+//loops over all input filds and set the value from localstorege
 $(".time").each(function() {
     // console.log($(this));
     var currentTime = $(this).parent().attr("id");
